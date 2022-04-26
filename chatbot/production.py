@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_-du6o7@w_%fp8*9f4g6qynpf2_lyik7h@*cwg2eavxqt$g-$!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 #Host on which it is running
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],'aichatbot.birangal.com'] if 'WEBSITE_HOSTNAME' in os.environ else []
 
 
 # Application definition
