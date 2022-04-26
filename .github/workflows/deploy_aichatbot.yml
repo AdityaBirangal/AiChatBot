@@ -2,12 +2,12 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - AiChatBot
+name: Build and deploy Python app to Azure Web App - aichatbot
 
 on:
   push:
     branches:
-      - master
+      - deploy
   workflow_dispatch:
 
 jobs:
@@ -58,6 +58,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'AiChatBot'
+          app-name: 'aichatbot'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EAD84F160FF546A981134E3EE0458042 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_15F7225DABF4441E85649FBCFFDD7AF8 }}
