@@ -10,10 +10,10 @@ def getresponse(sentence):
     wiki_sentence = sentence
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-    with open('.\intents.json', 'r') as json_data:
+    with open('Home/intents.json', 'r') as json_data:
         intents = json.load(json_data)
 
-    FILE = ".\data.pth"
+    FILE = "Home/data.pth"
     data = torch.load(FILE)
 
     input_size = data["input_size"]
